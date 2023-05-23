@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  labels:
+    operators.coreos.com/confluent-for-kubernetes.openshift-operators: ''
+  name: confluent-for-kubernetes
+  namespace: openshift-operators
+spec:
+  channel: '2.5'
+  installPlanApproval: Automatic
+  name: confluent-for-kubernetes
+  source: certified-operators
+  sourceNamespace: openshift-marketplace
