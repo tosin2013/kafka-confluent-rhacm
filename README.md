@@ -2,6 +2,7 @@
 
 ## Requirements 
 *This is an example*
+* OpenShift 4.11
 * ACM hub Cluster Networks
   * Cluster Network: 10.128.0.0/14
   * Service Network: 172.30.0.0/16
@@ -19,6 +20,6 @@ cd confluent-kubernetes-examples/hybrid/multi-region-clusters/external-access
 
 
 
-Links: 
+## Links: 
 * https://www.redhat.com/architect/submariner-acm-add-on
 * https://submariner.io/getting-started/quickstart/openshift/aws/
