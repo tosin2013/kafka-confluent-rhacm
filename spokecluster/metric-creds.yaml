@@ -1,8 +1,0 @@
-kind: Secret
-apiVersion: v1
-metadata:
-  name: metric-creds
-  namespace: west
-data:
-  plain.txt: dXNlcm5hbWU9b3BlcmF0b3IKcGFzc3dvcmQ9b3BlcmF0b3Itc2VjcmV0Cg==
-type: Opaque
