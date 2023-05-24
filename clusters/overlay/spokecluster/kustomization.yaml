@@ -8,3 +8,33 @@ resources:
   - namespace.yaml
   - scc.yaml
   - zookeeper-cluster1.yaml 
+
+patchesJson6902:
+- target:
+    kind: ServiceExport
+    name: zookeeper-hybrid-0-internal
+  patch: |-
+    - op: replace
+      path: /metadata/namespace
+      value: west
+- target:
+    kind: ServiceExport
+    name: zookeeper-hybrid-1-internal
+  patch: |-
+    - op: replace
+      path: /metadata/namespace
+      value: west
+- target:
+    kind: ServiceExport
+    name: zookeeper-hybrid-2-internal
+  patch: |-
+    - op: replace
+      path: /metadata/namespace
+      value: west
+- target:
+    kind: ServiceExport
+    name: zookeeper-hybrid
+  patch: |-
+    - op: replace
+      path: /metadata/namespace
+      value: west
