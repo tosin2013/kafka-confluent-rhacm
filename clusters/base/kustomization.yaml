@@ -1,0 +1,5 @@
+resources:
+  - service-endpoints-zookeeper-hybrid.yaml
+  - service-endpoints-zookeeper-hybrid-0-internal.yaml
+  - service-endpoints-zookeeper-hybrid-1-internal.yaml
+  - service-endpoints-zookeeper-hybrid-2-internal.yaml
