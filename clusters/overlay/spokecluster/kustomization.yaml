@@ -8,7 +8,10 @@ resources:
   - namespace.yaml
   - scc.yaml
   - zookeeper-cluster1.yaml 
-
+  - metric-creds.yaml
+  - credential.yaml
+  - kafka.yaml
+  
 patchesJson6902:
 - target:
     kind: ServiceExport
