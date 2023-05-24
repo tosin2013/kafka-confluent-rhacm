@@ -10,6 +10,7 @@ resources:
   - zookeeper-hub.yaml
   - metric-creds.yaml
   - credential.yaml
+  - c3-mds-client.yaml
   - kafka.yaml
 
 
