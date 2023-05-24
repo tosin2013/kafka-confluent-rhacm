@@ -3,4 +3,5 @@ kind: Kustomization
 
 resources:
   - namespace.yaml
+  - scc.yaml
   - zookeeper-cluster1.yaml 
