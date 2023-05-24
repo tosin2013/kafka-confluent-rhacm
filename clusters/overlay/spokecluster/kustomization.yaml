@@ -11,6 +11,7 @@ resources:
   - metric-creds.yaml
   - credential.yaml
   - c3-mds-client.yaml
+  - ca-pair-sslcerts.yaml
   - kafka.yaml
 
 patchesJson6902:
