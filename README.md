@@ -16,6 +16,10 @@
 oc apply -k https://github.com/tosin2013/kafka-confluent-rhacm/base-configs
 ```
 
+### Hub Cluser 
+
+### Spoke Cluster
+
 This repository contains the resources to deploy Kafka on OpenShift using ACM.
 Link: https://github.com/confluentinc/confluent-kubernetes-examples
 ```
