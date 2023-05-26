@@ -1,0 +1,9 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  name: basicauth
+  namespace: east
+data:
+  basic.txt: >-
+    YzNhZG1pbjogcGFzc3dvcmQxLEFkbWluaXN0cmF0b3JzCmMzcmVzdHJpY3RlZDogcGFzc3dvcmQyLFJlc3RyaWN0ZWQ=
+type: Opaque
