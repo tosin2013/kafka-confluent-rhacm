@@ -26,7 +26,7 @@ spec:
           secretRef: credential
         type: plain
       tls:
-        enabled: true
+        enabled: false
   dataVolumeCapacity: 10Gi
   metricReporter:
     enabled: true
