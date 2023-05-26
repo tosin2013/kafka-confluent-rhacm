@@ -34,17 +34,6 @@ cd confluent-kubernetes-examples/hybrid/multi-region-clusters/external-access
 oc apply -k https://github.com/tosin2013/kafka-confluent-rhacm/base-configs
 ```
 
-### Hub Cluser 
-```
-oc apply -k https://github.com/tosin2013/kafka-confluent-rhacm/clusters/overlay/hubcluster
-subctl export service --namespace east zookeeper-hybrid
-subctl export service --namespace east zookeeper-hybrid-0-internal
-subctl export service --namespace east zookeeper-hybrid-1-internal
-subctl export service --namespace east zookeeper-hybrid-2-internal 
-oc delete -k https://github.com/tosin2013/kafka-confluent-rhacm/clusters/overlay/hubcluster
-oc apply -k https://github.com/tosin2013/kafka-confluent-rhacm/clusters/overlay/hubcluster
-kubectl -n east describe endpointslice 
-```
 
 ### Spoke Cluster
 ```
@@ -58,7 +47,22 @@ oc apply -k https://github.com/tosin2013/kafka-confluent-rhacm/clusters/overlay/
 kubectl -n west describe endpointslice 
 ```
 
+### Hub Cluser 
+```
+oc apply -k https://github.com/tosin2013/kafka-confluent-rhacm/clusters/overlay/hubcluster
+subctl export service --namespace east zookeeper-hybrid
+subctl export service --namespace east zookeeper-hybrid-0-internal
+subctl export service --namespace east zookeeper-hybrid-1-internal
+subctl export service --namespace east zookeeper-hybrid-2-internal 
+oc delete -k https://github.com/tosin2013/kafka-confluent-rhacm/clusters/overlay/hubcluster
+oc apply -k https://github.com/tosin2013/kafka-confluent-rhacm/clusters/overlay/hubcluster
+kubectl -n east describe endpointslice 
+```
 
+
+curl -I zookeeper-hybrid-0-internal.west.svc.clusterset.local:3888
+
+curl -I zookeeper-hybrid-2-internal.east.svc.clusterset.local:3888
 
 ## Links: 
 * https://www.redhat.com/architect/submariner-acm-add-on
