@@ -47,18 +47,18 @@ patches:
   patch: |-
     - op: replace
       path: /metadata/namespace
-      value: east
+      value: west
 - target:
     kind: ServiceExport
     name: kafka-hybrid-0-internal
   patch: |-
     - op: replace
       path: /metadata/namespace
-      value: east
+      value: west
 - target:
     kind: ServiceExport
     name: kafka-hybrid-1-internal
   patch: |-
     - op: replace
       path: /metadata/namespace
-      value: east
+      value: west
