@@ -1,0 +1,21 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: controlcenter-hybrid
+  namespace: east
+  labels:
+    app.kubernetes.io/managed-by: confluent-operator
+    confluent-platform: 'true'
+    cr-name: controlcenter-hybrid
+    type: controlcenter
+spec:
+  to:
+    kind: Service
+    name: controlcenter-hybrid
+    weight: 100
+  port:
+    targetPort: external
+  tls:
+    termination: passthrough
+    insecureEdgeTerminationPolicy: None
+  wildcardPolicy: None
