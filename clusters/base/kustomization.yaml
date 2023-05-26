@@ -3,3 +3,6 @@ resources:
   - service-endpoints-zookeeper-hybrid-0-internal.yaml
   - service-endpoints-zookeeper-hybrid-1-internal.yaml
   - service-endpoints-zookeeper-hybrid-2-internal.yaml
+  - service-endpoints-kafka-hybrid-0-internal.yaml
+  - service-endpoints-kafka-hybrid-1-internal.yaml
+  - service-endpoints-kafka-hybrid.yaml

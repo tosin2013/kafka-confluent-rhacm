@@ -1,10 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-bases:
-- ../../base
-
 resources:
+  - ../../base
   - namespace.yaml
   - scc.yaml
   - zookeeper-cluster1.yaml 
@@ -14,7 +12,7 @@ resources:
   - ca-pair-sslcerts.yaml
   - kafka.yaml
 
-patchesJson6902:
+patches:
 - target:
     kind: ServiceExport
     name: zookeeper-hybrid-0-internal
@@ -43,3 +41,24 @@ patchesJson6902:
     - op: replace
       path: /metadata/namespace
       value: west
+- target:
+    kind: ServiceExport
+    name: kafka-hybrid
+  patch: |-
+    - op: replace
+      path: /metadata/namespace
+      value: east
+- target:
+    kind: ServiceExport
+    name: kafka-hybrid-0-internal
+  patch: |-
+    - op: replace
+      path: /metadata/namespace
+      value: east
+- target:
+    kind: ServiceExport
+    name: kafka-hybrid-1-internal
+  patch: |-
+    - op: replace
+      path: /metadata/namespace
+      value: east
