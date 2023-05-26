@@ -13,7 +13,9 @@ resources:
   - c3-mds-client.yaml
   - ca-pair-sslcerts.yaml
   - kafka.yaml
-
+  - basicauth.yaml
+  - controlcenter-hybrid.yaml
+  - control-center-route.yaml
 
 patchesJson6902:
 - target:

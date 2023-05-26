@@ -8,7 +8,7 @@ spec:
     basic:
       secretRef: basicauth
     type: basic
-  dataVolumeCapacity: 50Gi
+  dataVolumeCapacity: 100Gi
   dependencies:
     kafka:
       authentication:
