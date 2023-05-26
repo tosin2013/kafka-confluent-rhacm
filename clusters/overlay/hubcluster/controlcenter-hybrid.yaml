@@ -8,6 +8,10 @@ spec:
     basic:
       secretRef: basicauth
     type: basic
+  configOverrides:
+    server:
+      - confluent.controlcenter.streams.consumer.client.rack=east
+      - confluent.controlcenter.streams.replication.factor=-1
   dataVolumeCapacity: 100Gi
   dependencies:
     kafka:
