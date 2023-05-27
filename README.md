@@ -42,6 +42,9 @@ subctl export service --namespace west zookeeper-hybrid
 subctl export service --namespace west zookeeper-hybrid-0-internal
 subctl export service --namespace west zookeeper-hybrid-1-internal
 subctl export service --namespace west zookeeper-hybrid-2-internal 
+subctl export service --namespace west kafka-hybrid
+subctl export service --namespace west kafka-hybrid-0-internal
+subctl export service --namespace west kafka-hybrid-1-internal
 oc delete -k https://github.com/tosin2013/kafka-confluent-rhacm/clusters/overlay/spokecluster
 oc apply -k https://github.com/tosin2013/kafka-confluent-rhacm/clusters/overlay/spokecluster
 kubectl -n west describe endpointslice 
@@ -54,6 +57,9 @@ subctl export service --namespace east zookeeper-hybrid
 subctl export service --namespace east zookeeper-hybrid-0-internal
 subctl export service --namespace east zookeeper-hybrid-1-internal
 subctl export service --namespace east zookeeper-hybrid-2-internal 
+subctl export service --namespace east kafka-hybrid
+subctl export service --namespace east kafka-hybrid-0-internal
+subctl export service --namespace east kafka-hybrid-1-internal
 oc delete -k https://github.com/tosin2013/kafka-confluent-rhacm/clusters/overlay/hubcluster
 oc apply -k https://github.com/tosin2013/kafka-confluent-rhacm/clusters/overlay/hubcluster
 kubectl -n east describe endpointslice 
@@ -67,3 +73,6 @@ curl -I zookeeper-hybrid-2-internal.east.svc.clusterset.local:3888
 ## Links: 
 * https://www.redhat.com/architect/submariner-acm-add-on
 * https://submariner.io/getting-started/quickstart/openshift/aws/
+
+
+basicsecret
