@@ -12,6 +12,7 @@ spec:
     server:
       - confluent.controlcenter.streams.consumer.client.rack=east
       - confluent.controlcenter.streams.replication.factor=-1
+      - client.dns.lookup=use_all_dns_ips
   dataVolumeCapacity: 100Gi
   dependencies:
     kafka:
@@ -19,7 +20,9 @@ spec:
         jaasConfig:
           secretRef: credential
         type: plain
-      bootstrapEndpoint: 'kafka-hybrid.east.svc.cluster.local:9071,kafka-hybrid-0-internal.west.svc.clusterset.local:9071,kafka-hybrid-1-internal.west.svc.clusterset.local:9071'
+      bootstrapEndpoint: 'kafka-hybrid.east.svc.cluster.local:9071,kafka-hybrid-0-internal.west.svc.clusterset.local:9092,kafka-hybrid-1-internal.west.svc.clusterset.local:9092'
+      tls:
+        enabled: true
   image:
     application: 'confluentinc/cp-enterprise-control-center:7.3.3'
     init: 'confluentinc/confluent-init-container:2.5.2'
