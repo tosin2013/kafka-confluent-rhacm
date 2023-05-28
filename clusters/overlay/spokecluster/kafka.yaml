@@ -13,6 +13,7 @@ spec:
       - replica.selector.class=org.apache.kafka.common.replica.RackAwareReplicaSelector
       - session.timeout.ms=30000
       - max.poll.interval.ms=300000
+      - zookeeper.connection.timeout.ms=60000
   dependencies:
     zookeeper:
       endpoint: 'zookeeper-hybrid-0.zookeeper-hybrid.west.svc.cluster.local:2181,zookeeper-hybrid-1.zookeeper-hybrid.west.svc.cluster.local:2181,zookeeper-hybrid.east.svc.clusterset.local:2181/mrc'
