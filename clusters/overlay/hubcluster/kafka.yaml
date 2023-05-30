@@ -31,6 +31,8 @@ spec:
         enabled: true
   dataVolumeCapacity: 100Gi
   metricReporter:
+    tls:
+      enabled: true
     enabled: true
     bootstrapEndpoint: kafka-hybrid.east.svc.cluster.local:9072
     authentication:        

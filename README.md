@@ -22,6 +22,14 @@ $ chmod +x /tmp/subctl-v0.14.3/subctl-v0.14.3-linux-amd64
 $ sudo mv /tmp/subctl-v0.14.3/subctl-v0.14.3-linux-amd64 /usr/local/bin/subctl
 ```
 
+## or Install using script
+```
+curl https://get.submariner.io | VERSION=0.14.3 bash
+```
+```
+subctl verify --context <context1> --tocontext <context2>
+````
+
 **This repository contains the resources to deploy Kafka on OpenShift using ACM.**
 Link: https://github.com/confluentinc/confluent-kubernetes-examples
 ```
