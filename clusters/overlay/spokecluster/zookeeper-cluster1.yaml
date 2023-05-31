@@ -8,9 +8,9 @@ metadata:
 spec:
   configOverrides:
     peers:
-      - 'server.10=zookeeper-east-0-internal.east.svc.clusterset.local:2888:3888'
-      - 'server.11=zookeeper-east-1-internal.east.svc.clusterset.local:2888:3888'
-      - 'server.12=zookeeper-east-2-internal.east.svc.clusterset.local:2888:3888'
+      - 'server.10=local-cluster.zookeeper-east-0-internal.east.svc.clusterset.local:2888:3888'
+      - 'server.11=local-cluster.zookeeper-east-1-internal.east.svc.clusterset.local:2888:3888'
+      - 'server.12=local-cluster.zookeeper-east-2-internal.east.svc.clusterset.local:2888:3888'
       - 'server.20=zookeeper-west-0.zookeeper-west.west.svc.cluster.local:2888:3888'
       - 'server.21=zookeeper-west-1.zookeeper-west.west.svc.cluster.local:2888:3888'
     server:
