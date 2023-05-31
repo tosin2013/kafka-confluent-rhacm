@@ -2,7 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - ../../base
   - namespace.yaml
   - scc.yaml
   - zookeeper-hub.yaml
@@ -11,6 +10,7 @@ resources:
   - c3-mds-client.yaml
   - ca-pair-sslcerts.yaml
   - kafka.yaml
+  - schemaregistry.yaml
   - basicauth.yaml
   - controlcenter-hybrid.yaml
   - control-center-route.yaml

@@ -10,6 +10,7 @@ resources:
   - c3-mds-client.yaml
   - ca-pair-sslcerts.yaml
   - kafka.yaml
+  - schemaregistry.yaml
 
 patches:
 - target:
