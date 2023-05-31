@@ -4,7 +4,7 @@ metadata:
   name: kafka-west
   namespace: west
   annotations:
-    platform.confluent.io/zookeeper-myid-offset: "20"
+    platform.confluent.io/broker-id-offset: "10"
 spec:
   configOverrides:
     server:
