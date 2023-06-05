@@ -1,5 +1,8 @@
 #  Kafka Deployments using ACM
 
+
+https://docs.confluent.io/platform/current/tutorials/examples/multiregion/docs/multiregion.html
+
 ## Requirements 
 *This is an example*
 * OpenShift 4.11
@@ -10,6 +13,7 @@
   * Cluster Network: 10.132.0.0/14
   * Service Network: 172.31.0.0/16
 * Configure Submariner
+* Confluent for Kubernetes Operator
 
 
 ### Pull podman image

@@ -8,7 +8,7 @@ metadata:
 spec:
   server:
     - client.rack=east
-    - confluent.license.topic.replication.factor=3
+    - replication.factor=-1
     - replica.selector.class=org.apache.kafka.common.replica.RackAwareReplicaSelector
     - session.timeout.ms=30000
     - max.poll.interval.ms=300000
