@@ -6,7 +6,7 @@ metadata:
   annotations:
     platform.confluent.io/broker-id-offset: "10"
 spec:
-  configOverrides:
+ configOverrides:
     server:
       - client.rack=west
       - replication.factor=-1

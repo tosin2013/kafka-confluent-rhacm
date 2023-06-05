@@ -10,7 +10,7 @@ spec:
         jaasConfig:
           secretRef: credential
         type: plain
-      bootstrapEndpoint: 'kafka-west.west.svc.cluster.local:9071,local-cluster.kafka-east-0-internal.east.svc.cluster.local:9071,local-cluster.kafka-east-1-internal.east.svc.cluster.local:9071,local-cluster.kafka-east-2-internal.east.svc.cluster.local:9071'
+      bootstrapEndpoint: 'kafka-west.west.svc.cluster.local:9071,local-cluster.kafka-east-0-internal.east.svc.cluster.local:9092,local-cluster.kafka-east-1-internal.east.svc.cluster.local:9092,local-cluster.kafka-east-2-internal.east.svc.cluster.local:9092'
       tls:
         enabled: true
   image:
