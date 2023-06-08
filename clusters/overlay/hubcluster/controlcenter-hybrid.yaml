@@ -12,7 +12,6 @@ spec:
     server:
       - confluent.controlcenter.streams.consumer.client.rack=east
       - confluent.controlcenter.streams.replication.factor=-1
-      - client.dns.lookup=use_all_dns_ips
   dataVolumeCapacity: 100Gi
   dependencies:
     kafka:
