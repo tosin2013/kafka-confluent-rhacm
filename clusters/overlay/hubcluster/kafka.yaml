@@ -13,6 +13,7 @@ spec:
     - session.timeout.ms=30000
     - max.poll.interval.ms=300000
     - zookeeper.connection.timeout.ms=60000
+    - use_all_dns_ips=true
   dependencies:
     zookeeper:
       endpoint: 'zookeeper-east-0.zookeeper-east.east.svc.cluster.local:2181,zookeeper-east-1.zookeeper-east.east.svc.cluster.local:2181,zookeeper-east-2.zookeeper-east.east.svc.cluster.local:2181,kafka-testing-1.zookeeper-west-1-internal.west.svc.clusterset.local:2181,kafka-testing-1.zookeeper-west-1-internal.west.svc.clusterset.local:2181'
